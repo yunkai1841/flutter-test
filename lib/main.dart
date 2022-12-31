@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -50,6 +52,19 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   final String _text = 'ぼっちちゃんもイソスタ初めてみたら？';
+
+  @override
+  void initState() {
+    super.initState();
+    // Add code after super
+    Timer.periodic(const Duration(seconds: 3), (timer) {
+      setState(() {
+        if (_counter > 0) {
+          _counter--;
+        }
+      });
+    });
+  }
 
   void _incrementCounter() {
     setState(() {
