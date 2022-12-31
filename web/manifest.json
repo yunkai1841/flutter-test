@@ -1,11 +1,11 @@
 {
-    "name": "isosta",
-    "short_name": "isosta",
+    "name": "イソスタ",
+    "short_name": "イソスタ",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "ぼっちちゃんのイソスタ",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
