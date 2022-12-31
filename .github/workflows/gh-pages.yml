@@ -1,5 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Deploy web app
 
 on:
   # Runs on pushes targeting the default branch
@@ -37,11 +36,10 @@ jobs:
       - name: Install Packages
         run: flutter pub get
       - name: Build web app
-        run: flutter build web
+        run: flutter build web --base-href "/flutter-test/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload entire repository
           path: './build/web'
       - name: Deploy to GitHub Pages
         id: deployment
